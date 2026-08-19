@@ -206,6 +206,12 @@ a:focus-visible {
   scroll-margin-top: 4.5rem;
 }
 
+.lang-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+
 .legal-content p {
   margin: 0.75rem 0;
 }
