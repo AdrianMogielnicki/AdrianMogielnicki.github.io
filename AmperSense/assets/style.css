@@ -1,0 +1,257 @@
+:root {
+  --bg: #0b1220;
+  --bg-card: #111a2e;
+  --text: #e8edf7;
+  --text-muted: #9aa8c4;
+  --accent: #4da3ff;
+  --accent-hover: #7bb8ff;
+  --border: #243049;
+  --max-width: 52rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 18, 32, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header-inner,
+.page-wrap,
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.site-nav .brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-right: auto;
+}
+
+.site-nav .brand:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.lang-switch .sep {
+  color: var(--text-muted);
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0;
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: 0.01em;
+}
+
+.hero p {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  max-width: 38rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.45rem;
+  background: var(--bg-card);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #16345c;
+  border-color: #2a5a96;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #1c4373;
+}
+
+.page-title {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.toc {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-card);
+}
+
+.toc h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  columns: 1;
+}
+
+@media (min-width: 640px) {
+  .toc ol {
+    columns: 2;
+    column-gap: 2rem;
+  }
+}
+
+.toc li {
+  break-inside: avoid;
+  margin: 0.25rem 0;
+}
+
+.legal-content {
+  padding-bottom: 3rem;
+}
+
+.legal-content > section {
+  margin: 2rem 0;
+  padding-top: 0.5rem;
+}
+
+.legal-content h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.15rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.lang-heading {
+  margin: 2.5rem 0 1rem;
+  padding: 1rem 0 0.5rem;
+  border-top: 2px solid var(--border);
+  font-size: 1.35rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.legal-content p {
+  margin: 0.75rem 0;
+}
+
+.legal-content ol,
+.legal-content ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.legal-content li {
+  margin: 0.35rem 0;
+}
+
+.intro-block {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+
+.address {
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1.25rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.center-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.25rem;
+}
+
+.center-page h1 {
+  margin: 0 0 0.75rem;
+}
